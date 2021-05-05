@@ -76,7 +76,7 @@ const processIssue = async (githubAPI: GitHubAPI, githubIssue: GitHubIssueAPI, c
   // Issues opened by team members bypass the process.
   if (await githubAPI.isOrgMember(issue.author.name, config.organization)) {
     log(`The creator of issue #${issue.number} is a member of the organization.`);
-    return;
+    // return;
   }
 
   // An extra assurance we will not get into a situation where we
